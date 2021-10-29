@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Year;Length;Title;Subject;Popularity;Awards -->
+<h1>Movie list</h1>
+
+<table id="customers">
+    <tr>
+        <th>Year</th>
+        <th>Length</th>
+        <th>Title</th>
+        <th>Subject</th>
+        <th>Popularity</th>
+        <th>Awards</th>
+    </tr>
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie.year}"></td>
+        <td th:text="${movie.length}"></td>
+        <td th:text="${movie.title}"></td>
+        <td th:text="${movie.subject}"></td>
+        <td th:text="${movie.popularity}"></td>
+        <td th:text="${movie.awards}"></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
